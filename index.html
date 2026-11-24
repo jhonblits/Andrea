@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para Andrea ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blush:#fff0f6;--petal:#ffd6e7;--rose:#ff8fb8;--berry:#ff4f93;--plum:#7a2a50;--sun:#ffe27a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Quicksand,system-ui,sans-serif;color:var(--plum);line-height:1.6;background:linear-gradient(160deg,#fff0f6 0%,#ffd6e7 45%,#ffc2dc 100%);background-attachment:fixed;overflow-x:hidden}
+h1,h2,.script{font-family:'Dancing Script','Segoe Script',cursive;font-weight:700}
+#grow{position:fixed;top:0;left:0;right:0;height:6px;background:rgba(255,255,255,.55);z-index:50}
+#grow i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--berry))}
+#sprout{position:fixed;top:8px;left:3%;font-size:26px;z-index:51;transform:translateX(-50%);pointer-events:none;filter:drop-shadow(0 2px 3px rgba(255,79,147,.4))}
+.fl{position:fixed;bottom:-40px;z-index:1;pointer-events:none;opacity:.75;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+.bu{position:fixed;z-index:99;pointer-events:none;animation:pop .9s ease-out forwards}
+@keyframes pop{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.2);opacity:0}}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1rem}
+.big{position:absolute;font-size:min(70vw,360px);opacity:.22;animation:beat 1.8s ease-in-out infinite;z-index:0;user-select:none}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.1)}28%{transform:scale(1)}42%{transform:scale(1.07)}}
+.hero>*:not(.big){position:relative;z-index:2}
+.hero h1{font-size:clamp(4.5rem,18vw,9rem);line-height:1;color:var(--berry);text-shadow:0 4px 0 #fff,0 10px 30px rgba(255,79,147,.35)}
+.type{font-size:clamp(1.05rem,3.6vw,1.4rem);min-height:2em;margin:1rem 0 2rem;font-weight:600}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 1.05rem Quicksand,sans-serif;color:#fff;text-decoration:none;padding:.85rem 1.8rem;border-radius:999px;background:linear-gradient(135deg,var(--rose),var(--berry));box-shadow:0 8px 22px rgba(255,79,147,.4);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 28px rgba(255,79,147,.5)}
+.btn:focus-visible,.env:focus-visible,.card:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+#viaje{position:relative;max-width:1000px;margin:0 auto;padding:2rem 1rem 3rem}
+#viaje::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;border-radius:4px;background:repeating-linear-gradient(to bottom,var(--rose) 0 12px,transparent 12px 22px);opacity:.6}
+.stage{position:relative;z-index:2;margin:0 0 4rem;text-align:center}
+.stage h2{display:inline-block;font-size:clamp(2rem,6vw,3rem);color:var(--berry);background:var(--blush);padding:.1em .8em;border-radius:999px;box-shadow:0 6px 18px rgba(255,79,147,.25);border:3px solid var(--petal)}
+.say{max-width:34rem;margin:1rem auto 1.8rem;font-size:1.1rem;font-weight:600;background:rgba(255,255,255,.7);padding:.8rem 1.2rem;border-radius:18px}
+.cards{display:flex;flex-wrap:wrap;gap:1.6rem;justify-content:center}
+.card{width:min(290px,86vw);background:#fff;padding:.7rem .7rem 1rem;border-radius:6px;box-shadow:0 10px 26px rgba(122,42,80,.25);cursor:pointer;opacity:0;transform:scale(.9) rotate(var(--r,0deg));transition:opacity .6s,transform .5s,box-shadow .3s}
+.card:nth-child(odd){--r:-2.5deg}.card:nth-child(even){--r:2.5deg}
+.card.in{opacity:1;transform:scale(1) rotate(var(--r))}
+.card.in:hover{transform:scale(1.05) rotate(0);box-shadow:0 16px 34px rgba(255,79,147,.45)}
+.card img{width:100%;height:auto;display:block;border-radius:3px}
+.card figcaption{margin-top:.7rem;font-weight:600;font-size:.98rem}
+.ani{max-width:620px;margin:0 auto 4rem;padding:2rem 1.2rem;text-align:center;background:rgba(255,255,255,.75);border-radius:28px;border:3px dashed var(--rose);position:relative;z-index:2}
+.ani h2{font-size:clamp(2rem,6vw,2.8rem);color:var(--berry)}
+#frase{min-height:4.5rem;margin:1rem 0 1.4rem;font-size:1.3rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+#frase.pop{animation:fr .5s ease-out}
+@keyframes fr{from{transform:scale(.7) rotate(-4deg);opacity:0}to{transform:none;opacity:1}}
+.final{text-align:center;padding:1rem 1rem 5rem;position:relative;z-index:2}
+.final h2{font-size:clamp(2.2rem,7vw,3.4rem);color:var(--berry)}
+.env{margin-top:1rem;border:0;background:none;cursor:pointer;font-size:5.5rem;line-height:1;color:var(--plum);font-family:Quicksand,sans-serif;animation:beat 1.8s ease-in-out infinite}
+.env span{display:block;font-size:1rem;font-weight:700;margin-top:.3rem}
+footer{text-align:center;padding:1.5rem 1rem 2.5rem;font-weight:600;position:relative;z-index:2}
+.ov{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:1.2rem;background:rgba(122,42,80,.6);backdrop-filter:blur(4px)}
+.ov.on{display:flex}
+.ov img{max-width:100%;max-height:78vh;border:8px solid #fff;border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.ov figure{text-align:center;color:#fff;font-weight:700;font-size:1.1rem}
+.letter{max-width:520px;max-height:88vh;overflow:auto;background:#fffafc;border-radius:18px;padding:2rem 1.6rem;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.4);border:4px solid var(--petal);animation:fr .6s ease-out}
+.letter h3{font:700 2.2rem 'Dancing Script',cursive;color:var(--berry);margin-bottom:.8rem}
+.letter p{margin-bottom:.9rem;font-size:1.05rem}
+.letter small{display:block;margin-top:1rem;color:var(--rose);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:rotate(var(--r))}}
+</style>
+</head>
+<body>
+<div id="grow"><i></i></div><div id="sprout">🌱</div>
+
+<header class="hero">
+  <div class="big" aria-hidden="true">💗</div>
+  <h1>Andrea</h1>
+  <p class="type" id="type" aria-label="Mira cuánto has crecido y cuánto brillas"></p>
+  <a class="btn" href="#viaje">Empezar tu viaje 💗</a>
+</header>
+
+<main id="viaje">
+  <section class="stage">
+    <h2>Tus primeros pasos</h2>
+    <p class="say">Desde pequeña ya llevabas una luz que ninguna lágrima podía apagar.</p>
+    <div class="cards">
+      <figure class="card" tabindex="0"><img src="fotos/1.jpg" alt="Andrea de niña en un cumpleaños" loading="lazy"><figcaption>Un cumpleaños con lágrimas y pastel 🎂</figcaption></figure>
+      <figure class="card" tabindex="0"><img src="fotos/3.jpg" alt="Andrea de niña posando" loading="lazy"><figcaption>Pose de campeona desde chiquita 💪</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h2>Jugar, cuidar, reír</h2>
+    <p class="say">La ternura que hoy tienes se nota desde entonces. Nunca la pierdas.</p>
+    <div class="cards">
+      <figure class="card" tabindex="0"><img src="fotos/4.jpg" alt="Andrea abrazando a un cachorro" loading="lazy"><figcaption>Un corazón enorme para los pequeñitos 🐶</figcaption></figure>
+      <figure class="card" tabindex="0"><img src="fotos/12.jpg" alt="Andrea sacando la lengua junto a un niño" loading="lazy"><figcaption>Travesuras y sonrisas 😜</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h2>Descubriéndote</h2>
+    <p class="say">Probar, equivocarse y reinventarse también es crecer. Sigue siendo valiente.</p>
+    <div class="cards">
+      <figure class="card" tabindex="0"><img src="fotos/2.jpg" alt="Selfie de Andrea con gorro blanco" loading="lazy"><figcaption>Una sonrisa de las tuyas 🧣</figcaption></figure>
+      <figure class="card" tabindex="0"><img src="fotos/5.jpg" alt="Andrea con un filtro de maquillaje" loading="lazy"><figcaption>Atreviéndote a ser creativa 🎨</figcaption></figure>
+      <figure class="card" tabindex="0"><img src="fotos/10.jpg" alt="Collage de selfies de Andrea" loading="lazy"><figcaption>Mil caras, una misma chispa ✨</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h2>Tu propio camino</h2>
+    <p class="say">Cada paso, aunque sea lento, te acerca a donde quieres llegar.</p>
+    <div class="cards">
+      <figure class="card" tabindex="0"><img src="fotos/11.jpg" alt="Andrea con su perro" loading="lazy"><figcaption>Amiga fiel de los peluditos 🐾</figcaption></figure>
+      <figure class="card" tabindex="0"><img src="fotos/8.jpg" alt="Andrea con una cámara en un paisaje de cerros" loading="lazy"><figcaption>Aventurera con cámara en mano 📷</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h2>Hoy, tu mejor versión</h2>
+    <p class="say">Hoy brillas con luz propia, y lo mejor es que apenas estás empezando.</p>
+    <div class="cards">
+      <figure class="card" tabindex="0"><img src="fotos/9.jpg" alt="Andrea sentada con un ramo de flores" loading="lazy"><figcaption>Rodeada de luz y flores 🌻</figcaption></figure>
+      <figure class="card" tabindex="0"><img src="fotos/7.jpg" alt="Andrea con vestido azul frente al espejo" loading="lazy"><figcaption>Lista para brillar 💙</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<section class="ani">
+  <h2>Dosis de ánimo</h2>
+  <p id="frase">Toca el botón cuando necesites una sonrisa 🌸</p>
+  <button class="btn" id="mag">Dame ánimo ✨</button>
+</section>
+
+<section class="final">
+  <h2>Y una cosa más…</h2>
+  <button class="env" id="env" aria-label="Abrir la carta">💌<span>Toca para abrir</span></button>
+</section>
+
+<footer>Hecha con cariño para ti, Andrea 💗</footer>
+
+<div class="ov" id="lb"><figure><img alt=""><p></p></figure></div>
+<div class="ov" id="carta"><div class="letter"><h3 id="ctit"></h3><div id="ctxt"></div><small>Toca para cerrar 💗</small></div></div>
+
+<script>
+/* ✏️ Edita aquí tus textos */
+const TYPE='Mira cuánto has crecido, y cuánto brillas ✨';
+const CARTA_TITULO='Para ti, Andrea';
+const CARTA=[
+ 'No sé si lo sabes, pero me gustas.',
+ 'Me gusta tu sonrisa, tu forma de ser y cómo cada versión de ti, de niña hasta hoy, me parece admirable.',
+ 'Esta página es mi manera de decírtelo con cariño y sin presión. Gracias por existir. ♡'
+];
+const FRASES=['Tú puedes con esto y con mucho más.','Un paso pequeño sigue siendo un paso.','Tu ritmo es el correcto.','Las flores también crecen con tormenta.','Eres capaz de cosas que aún no imaginas.','Descansar también es avanzar.','Tu sonrisa vale oro, cuídala.','Lo mejor de ti se construye día a día.'];
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const E=['💗','💖','💕','🌸','✨','🌷','💞'],rnd=a=>a[Math.random()*a.length|0];
+
+/* corazones que suben */
+function bg(){const s=document.createElement('span'),d=8+Math.random()*8;s.className='fl';s.textContent=rnd(E);s.style.left=Math.random()*100+'vw';s.style.fontSize=12+Math.random()*22+'px';s.style.animationDuration=d+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),d*1000)}
+if(!rm)setInterval(bg,700);
+
+/* explosión al tocar */
+function burst(x,y,n){if(rm)return;for(let i=0;i<n;i++){const s=document.createElement('span'),a=Math.random()*6.28,r=40+Math.random()*90;s.className='bu';s.textContent=rnd(E);s.style.left=x+'px';s.style.top=y+'px';s.style.setProperty('--dx',Math.cos(a)*r+'px');s.style.setProperty('--dy',Math.sin(a)*r+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),900)}}
+addEventListener('click',e=>burst(e.clientX,e.clientY,6));
+
+/* planta que crece con el scroll */
+const sp=$('#sprout'),bar=$('#grow i'),ST=['🌱','🌷','🌸','🌻'];
+function prog(){const p=scrollY/((document.documentElement.scrollHeight-innerHeight)||1);bar.style.width=p*100+'%';sp.style.left=Math.max(3,Math.min(97,p*100))+'%';sp.textContent=ST[Math.min(3,p*4|0)]}
+addEventListener('scroll',prog);prog();
+
+/* máquina de escribir */
+(function(){let i=0;const t=$('#type');if(rm){t.textContent=TYPE;return}const id=setInterval(()=>{t.textContent=TYPE.slice(0,++i);if(i>=TYPE.length)clearInterval(id)},70)})();
+
+/* fotos aparecen al llegar */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+$$('.card').forEach(c=>io.observe(c));
+
+/* ver foto grande */
+const lb=$('#lb');
+function openCard(c,ev){ev.stopPropagation();$('#lb img').src=c.querySelector('img').src;$('#lb img').alt=c.querySelector('img').alt;$('#lb p').textContent=c.querySelector('figcaption').textContent;lb.classList.add('on')}
+$$('.card').forEach(c=>{c.onclick=e=>openCard(c,e);c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCard(c,e)}}});
+lb.onclick=()=>lb.classList.remove('on');
+
+/* dosis de ánimo */
+let last=-1;
+$('#mag').onclick=()=>{let n;do{n=Math.random()*FRASES.length|0}while(n===last);last=n;const o=$('#frase');o.textContent=FRASES[n];o.classList.remove('pop');void o.offsetWidth;o.classList.add('pop')};
+
+/* carta */
+$('#ctit').textContent=CARTA_TITULO;
+$('#ctxt').innerHTML=CARTA.map(t=>'<p></p>').join('');
+$$('#ctxt p').forEach((p,i)=>p.textContent=CARTA[i]);
+$('#env').onclick=e=>{e.stopPropagation();$('#carta').classList.add('on');burst(innerWidth/2,innerHeight/2,28)};
+$('#carta').onclick=()=>$('#carta').classList.remove('on');
+addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('on');$('#carta').classList.remove('on')}});
+</script>
+</body>
+</html>
